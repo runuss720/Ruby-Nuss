@@ -2,8 +2,190 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Website</title>
+    <title>Portfolio</title>
+
+    <!-- Google Font (kept from your original code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background: white;
+        color: #555;
+      }
+
+      /* ===== Header (unchanged from your original) ===== */
+      .site-header {
+        text-align: center;
+        padding: 80px 20px 60px;
+      }
+
+      .name {
+        font-size: 2.5rem;
+        letter-spacing: 0.3em;
+        font-weight: 300;
+        margin: 0;
+      }
+
+      .tagline {
+        margin-top: 16px;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        color: #888;
+      }
+
+      .nav {
+        margin-top: 40px;
+      }
+
+      .nav a {
+        margin: 0 16px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        color: #777;
+        text-transform: uppercase;
+      }
+
+      .nav a:hover {
+        color: #000;
+      }
+
+      /* ===== Work Section ===== */
+      .work-section {
+        max-width: 1100px;
+        margin: 0 auto 120px;
+        padding: 0 20px;
+      }
+
+      .work-header {
+        margin-bottom: 40px;
+      }
+
+      .work-header h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      .work-header p {
+        font-size: 0.95rem;
+        color: #777;
+      }
+
+      /* ===== Project Grid ===== */
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+      }
+
+      .project-card {
+        background: #fafafa;
+        border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 180px;
+        background: #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        color: #999;
+      }
+
+      .project-content {
+        padding: 24px;
+      }
+
+      .project-content h3 {
+        margin: 0 0 12px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .project-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #e6f0ff;
+        color: #3366cc;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
+
   <body>
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <h1 class="name">Ruby Nuss</h1>
+      <p class="tagline">UX Researcher · Asheville, NC</p>
+
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/ruby-nuss-7a8429251/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </header>
+
+    <!-- ===== Work Section ===== -->
+    <section class="work-section">
+      <div class="work-header">
+        <h2>Work 🚀</h2>
+        <p>Some of my selected UX work</p>
+      </div>
+
+      <div class="project-grid">
+        <!-- Single project for now -->
+        <a href="project1.html" class="project-card">
+          <div class="project-image">
+            Project Image
+          </div>
+          <div class="project-content">
+            <h3>Project Title</h3>
+            <p>
+              A short description of the project. Explain the problem,
+              your role, and the impact in one or two sentences.
+            </p>
+            <div class="tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">Research</span>
+              <span class="tag">Wireframes</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
   </body>
 </html>
